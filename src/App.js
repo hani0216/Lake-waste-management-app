@@ -1,8 +1,9 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+
 import FirstPage from './SelectProfile';
-import { Navbar } from 'react-bootstrap';
-import NavbarComp from './components/NavbarComp';
+//import { Navbar } from 'react-bootstrap';
+import TopNav from './components/TopNav';
 import Login from './login.js';
 
 
@@ -11,7 +12,7 @@ import Login from './login.js';
 function App() {
   return (
     <div>
-      <NavbarComp />
+      <TopNav />
     </div>
   );
 }
