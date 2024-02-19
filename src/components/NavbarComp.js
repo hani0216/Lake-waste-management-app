@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button, Container, Form, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { BrowserRouter as Router, RoutesRoute, Link, Switch } from 'react-router-dom';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import About from './About';
 import Home from './Home';
 import Contact from './Contact';
@@ -31,11 +31,11 @@ function NavbarComp() {
         </Navbar>
       </div>
       <div>
-        <Switch>
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/" component={Home} />
-        </Switch>
+        <Routes>
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
       </div>
     </Router>
   );

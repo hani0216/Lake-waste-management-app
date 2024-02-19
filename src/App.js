@@ -18,12 +18,3 @@ function App() {
 
 export default App;
 
-function App() {
-  return (
-    <div>
-      <NavbarComp />
-    </div>
-  );
-}
-
-export default App;
