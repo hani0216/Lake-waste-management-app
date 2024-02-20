@@ -1,18 +1,19 @@
 import React from 'react';
 import './App.css';
 
-import FirstPage from './SelectProfile';
-//import { Navbar } from 'react-bootstrap';
+import FirstPage from './components/SelectProfile.js';
 import TopNav from './components/TopNav';
-import Login from './login.js';
+import Login from './components/Login/loginAdmin.js';
+import Home from './components/Home.js';
 
 
 
 
 function App() {
   return (
-    <div>
+    <div >
       <TopNav />
+      <Home  />
     </div>
   );
 }

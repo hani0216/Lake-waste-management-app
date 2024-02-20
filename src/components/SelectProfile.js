@@ -1,15 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './SelectProfile.css';
-//import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './components/NavbarScroll';
 
-function FirstPage() {
+function SelectProfile() {
   return (
-    <div>
-      <header>
-      <Navbar />
-      </header>
+    <div className='interface' >
+      
       <div className="d-grid gap-2 col-6 mx-auto profileList l2">
         <ul className="l1">
           <li><button className="button li1">ADMIN</button></li>
@@ -21,4 +17,4 @@ function FirstPage() {
   );
 }
 
-export default FirstPage;
+export default SelectProfile;
