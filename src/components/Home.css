@@ -1,0 +1,16 @@
+.scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .scroll-content {
+    display: inline-block;
+  }
+  
+  .scroll-content img {
+    width: 200px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
