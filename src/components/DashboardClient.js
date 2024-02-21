@@ -3,7 +3,7 @@ import './DashboardClient.css' ;
 
 function DashboardClient() {
   return (
-    <div>DashboardClient</div>
+    <div><p>kdjvln lknovksdnl oishdovn s</p></div>
   )
 }
 

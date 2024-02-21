@@ -8,6 +8,7 @@ import image3 from './licensed-image.jpg';
 import Home from './Home.js';
 import SelectProfile from './SelectProfile.js';
 import LoginClient from './loginClient.js';
+import Apropos from './Apropos.js';
 
 const images = [
   { src: image1, title: 'Bienvenue ...', description: 'Net’Léman est une action de nettoyage des rives et des fonds du Léman déclinée dans une quinzaine de secteurs sur tout le pourtour du Léman.' },
@@ -30,7 +31,7 @@ const TopNav = () => {
 
         <Routes>
           <Route path="/" element={<HomeCarousel />} />
-          <Route path="/about" element={<LoginClient />} />
+          <Route path="/about" element={<Apropos/>} />
           <Route path="/SelectProfile" element={<SelectProfile />} />
         </Routes>
       </div>
