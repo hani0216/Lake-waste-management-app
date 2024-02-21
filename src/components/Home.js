@@ -1,14 +1,11 @@
 import React from 'react';
-import './Home.css'
+import HomeCarousel from './HomeCarousel'; // Importer le composant HomeCarousel
 
 function Home() {
   return (
     <div>
-      <div className="scroll-container">
-        <div className="scroll-content">
-
-        </div>
-      </div>
+      <HomeCarousel /> {/* Utiliser le composant HomeCarousel uniquement dans la page Home */}
+      {/* Autres contenus de la page Home */}
     </div>
   );
 }
