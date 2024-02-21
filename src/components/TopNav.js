@@ -5,6 +5,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 import Home from './Home'; // Importer la page Home
 import SelectProfile from './SelectProfile.js';
 import LoginClient from './loginClient.js';
+import Apropos from './Apropos.js';
 
 const TopNav = () => {
   return (
@@ -20,8 +21,8 @@ const TopNav = () => {
         </Navbar>
 
         <Routes>
-          <Route path="/" element={<Home />} /> {/* Utiliser la page Home comme élément de la route */}
-          <Route path="/about" element={<LoginClient />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<Apropos/>} />
           <Route path="/SelectProfile" element={<SelectProfile />} />
         </Routes>
       </div>

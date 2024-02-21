@@ -3,7 +3,7 @@ import { Button, Container, Form, Nav, Navbar, NavDropdown } from 'react-bootstr
 import { BrowserRouter as Router, RoutesRoute, Link, Switch } from 'react-router-dom';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import About from './About';
+import About from './Apropos';
 import Home from './Home';
 
 function NavbarComp() {
