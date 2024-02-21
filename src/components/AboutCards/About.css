@@ -20,9 +20,8 @@
   
   /* Image */
   .card-img {
-    background: #00ff88;
-    background: linear-gradient(to top, #00ff88, #61efff);
-    height: 100%;
+    background-image:url('../img1.jpg') ;
+    height: 94%;
     width: 100%;
     position: absolute;
     transition: transform .3s ease-in-out;
