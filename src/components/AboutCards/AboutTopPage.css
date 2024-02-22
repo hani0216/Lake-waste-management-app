@@ -1,0 +1,33 @@
+.topabt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    background-color: #f0f0f0;
+    background-image:url('../../Enit.jpg');
+    background-size: cover;
+    margin-bottom: 200px;
+  }
+.description{
+  margin-top: 800px;
+  background-color: white;
+  max-width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  
+
+}
+.parDesc{
+  display:inline-block ;
+  margin-top: 20px;
+
+  
+}
+.imgDesc{
+  display:inline-block ;
+  width: 200px;
+  height: 100px;
+  margin-top: 6%;
+  margin-bottom: 10%;
+}
