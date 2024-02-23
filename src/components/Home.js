@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import img1 from './img1.jpg';
 import img2 from './img2.jpg';
 import img3 from './licensed-image.jpg';
-import './Home.css'; // Importation du fichier CSS pour styliser la page
+import './Home.css'; 
 
 function Home() {
   const [currentImage, setCurrentImage] = useState(0);

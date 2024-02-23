@@ -2,11 +2,14 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav } from 'react-bootstrap';
-import Home from './Home'; // Importer la page Home
+import Home from './Home'; 
 import SelectProfile from './SelectProfile.js';
 import LoginClient from './loginClient.js';
-import Apropos from './Apropos.js';
+import LoginAdmin from './loginAdmin.js';
+import LoginAnpe from './loginAnpe.js';
 
+import Apropos from './Apropos.js';
+import './Navbar.css'
 const TopNav = () => {
   return (
     <Router>
@@ -24,6 +27,9 @@ const TopNav = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<Apropos/>} />
           <Route path="/SelectProfile" element={<SelectProfile />} />
+          <Route path="/loginAdmin" element={<LoginAdmin />} />
+          <Route path="/loginAnpe" element={<LoginAnpe />} />
+          <Route path="/loginClient" element={<LoginClient />} />
         </Routes>
       </div>
     </Router>
