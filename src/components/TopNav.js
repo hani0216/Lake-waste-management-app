@@ -7,20 +7,21 @@ import SelectProfile from './SelectProfile.js';
 import LoginClient from './loginClient.js';
 import LoginAdmin from './loginAdmin.js';
 import LoginAnpe from './loginAnpe.js';
-
+import DashboardCl from './Dashboard/Dashboard_Client/DashboardCl.js';
 import Apropos from './Apropos.js';
 import './Navbar.css'
 const TopNav = () => {
   return (
     <Router>
-      <div>
-        <Navbar bg="primary" variant="dark">
-          <Navbar.Brand href="#">Nom d'application</Navbar.Brand>
+      <div >
+        <Navbar bg="primary" variant="dark">   
+          <Navbar.Brand className='test' href="#">EcoPact</Navbar.Brand>
           <Nav className="mr-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/about">About</Nav.Link>
-            <Nav.Link href="/SelectProfile">Log in</Nav.Link>
+            <Nav.Link href="/">Accueil</Nav.Link>
+            <Nav.Link href="/about">Qui sommes nous</Nav.Link>
+            <Nav.Link className='conNav' href="/SelectProfile">Se connecter</Nav.Link>
           </Nav>
+          
         </Navbar>
 
         <Routes>
@@ -30,6 +31,7 @@ const TopNav = () => {
           <Route path="/loginAdmin" element={<LoginAdmin />} />
           <Route path="/loginAnpe" element={<LoginAnpe />} />
           <Route path="/loginClient" element={<LoginClient />} />
+          <Route path='/DadhboardCl' element={<DashboardCl/>} />
         </Routes>
       </div>
     </Router>

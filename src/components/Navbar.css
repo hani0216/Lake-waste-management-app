@@ -7,23 +7,32 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Utilisation de flexbox */
+    display: flex;
+  
   }
+ 
   
   .navbar ul li {
     margin-right: 10px; /* Espacement entre les éléments de la barre de navigation */
+
   }
   
   .navbar ul li:last-child {
     margin-right: 0; /* Supprimer la marge à droite du dernier élément */
+    
+
   }
   
+ 
   .navbar a {
-    color: white; /* Couleur du texte des liens dans la barre de navigation */
-    text-decoration: none; /* Suppression du soulignement des liens */
+    color: white; 
+    text-decoration: none; 
   }
   
   .navbar a:hover {
-    color: lightgray; /* Couleur du texte des liens au survol */
+    color: lightgray; 
   }
-  
+  .conNav{
+    justify-content: flex-end;
+    margin-left: 820px;
+  }

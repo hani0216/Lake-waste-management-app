@@ -19,8 +19,8 @@ function AboutCardHani() {
     </svg></li>
   </ul>
   <div class="card-info">
-    <p class="title">Name</p>
-    <p class="subtitle">Web Dev</p>
+    <p class="title">zoubair laham</p>
+    <p class="subtitle">full stall developer</p>
   </div>
 </div>
         
