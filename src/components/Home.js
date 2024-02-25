@@ -23,8 +23,8 @@ function Home() {
       setWelcomeText("Nouvelles offres disponibles !");
       setTimeout(() => {
         setWelcomeText("Bienvenue sur notre site");
-      }, 5000);
-    }, 10000);
+      }, 2000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 

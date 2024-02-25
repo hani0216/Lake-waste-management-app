@@ -18,6 +18,7 @@ const TopNav = () => {
           <Navbar.Brand className='test' href="#">EcoPact</Navbar.Brand>
           <Nav className="mr-auto">
             <Nav.Link href="/">Accueil</Nav.Link>
+            <Nav.Link href="/dash">DashboardClient</Nav.Link>
             <Nav.Link href="/about">Qui sommes nous</Nav.Link>
             <Nav.Link className='conNav' href="/SelectProfile">Se connecter</Nav.Link>
           </Nav>
@@ -26,6 +27,7 @@ const TopNav = () => {
 
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/dash" element={<DashboardCl />} />
           <Route path="/about" element={<Apropos/>} />
           <Route path="/SelectProfile" element={<SelectProfile />} />
           <Route path="/loginAdmin" element={<LoginAdmin />} />

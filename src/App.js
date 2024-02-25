@@ -1,22 +1,31 @@
 import React from 'react';
 import './App.css';
-import './components/Navbar.css'
-import FirstPage from './components/SelectProfile.js';
-import TopNav from './components/TopNav';
-import Home from './components/Home.js';
-import HomeCarousel from './components/HomeCarousel';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
+import Topnav1 from './components/Topnav1';
+import Home1 from './components/Home1';
+import Apropos from './components/Apropos.js'
+import About from "./components/About";
 
-
-
-function App() {
+import SelectProfile from './components/SelectProfile';
+import LoginClient from './components/loginClient.js';
+import LoginAdmin from './components/loginAdmin.js';
+import LoginAnpe from './components/loginAnpe.js';
+const App = () => {
   return (
-    <div className='allbody' >
-      <TopNav />
-     
-    </div>
+    <Router>
+      <Topnav1 />
+      <Routes>
+        <Route exact path="/" element={<Home1 />} />
+        <Route path="/about" element={<Apropos />} />
+        <Route path="/select-profile" element={<SelectProfile />} />
+        <Route path="/loginAdmin" element={<LoginAdmin />} />
+          <Route path="/loginAnpe" element={<LoginAnpe />} />
+          <Route path="/loginClient" element={<LoginClient />} />
+         
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
-
