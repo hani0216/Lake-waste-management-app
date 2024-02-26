@@ -20,6 +20,7 @@ img {
 body {
   max-width: 100%;
   overflow-x: hidden;
+  background-color: cornflowerblue;
 }
 
 
@@ -36,7 +37,7 @@ nav {
 .navbar-links-container a {
   margin-right: 3rem;
   text-decoration: none;
-  color: black;
+  color: rgb(19, 19, 20);
   font-size: 1.1rem;
   font-weight: 600;
 }
@@ -55,7 +56,10 @@ nav {
   font-size: 1.15rem;
 }
 .primary-button:hover {
-  background-color: rgb(234, 234, 234);
+  background-color:#fe9e0d;
+}
+.primary-button {
+  background-color:#fe9e0d;
 }
 .navbar-menu-container svg {
   font-size: 1.5rem;
@@ -83,18 +87,40 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+ 
 }
 .primary-heading {
   font-size: clamp(2rem, 5vw, 4rem);
-  color: white;
+  color: rgb(20, 17, 17);
   /* line-height: 5rem; */
   max-width: 600px;
+  margin-left: 18rem;
+  white-space: nowrap;
+}
+.primary-heading2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: rgb(20, 17, 17);
+  /* line-height: 5rem; */
+  max-width: 600px;
+  margin-left: 2rem;
+  white-space: nowrap;
+}
+.primary-heading3 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: rgb(20, 17, 17);
+  /* line-height: 5rem; */
+  max-width: 600px;
+  margin-left: rem;
+  margin-left: 13rem;
+ 
 }
 .primary-text {
   font-size: clamp(1rem, 3vw, 1.5rem);
   max-width: 500px;
-  color: whitesmoke;
+  color: rgb(16, 14, 14);
   margin: 1.5rem 0rem;
+  
+  margin-left: 12rem;
 }
 
 .secondary-button {
@@ -111,6 +137,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  margin-left: 20rem;
 }
 .secondary-button svg {
   margin-left: 0.75rem;
@@ -436,4 +464,19 @@ nav {
 }
 .white-text {
   color: rgb(160, 37, 37);
+}
+.footer-container {
+  background-color:white; /* Change this to the desired background color */
+}
+.footer-wrapper {
+  background-color: #b6cbd8; /* Change this to the desired background color */
+  color: #ffffff; /* Change text color to white */
+/* Adjust padding as needed */
+  
+  /* Ensure content overflow is hidden */
+}
+.sticky-footer {
+ 
+  bottom: 0;
+  width: 100%;
 }
