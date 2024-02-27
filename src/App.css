@@ -6,6 +6,10 @@
 }
 nav-logo-container{
   background-color: rgb(23, 31, 150);
+ 
+}
+.maram{
+  margin-left: 2rem;
 }
 img {
   max-width: 100%;

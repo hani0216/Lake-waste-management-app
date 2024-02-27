@@ -8,7 +8,7 @@ const Topnav1 = () => {
   return (
     <nav>
       <div className='nav-logo-container'>
-        <img src={Logo} alt="" />
+        <img className='maram' src={Logo} alt="" />
       </div>
       <div className='navbar-links-container'>
         <a href="/">Acceuil</a>
