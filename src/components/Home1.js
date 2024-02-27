@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+
 import Topnav1 from './Topnav1'
 import BannerBackground from '../Assets/home-banner-background.png'
 import BannerImage from '../Assets/home-banner-image.png'
@@ -16,7 +18,7 @@ const Home1 = () => {
           <h1 className='primary-heading'>ECOPACT </h1>
           <h2 className='primary-heading2'>Bienvenue sur notre site</h2>
           <p className='primary-text'>EcoPact est une plateforme conçue pour instaurer une solution de surveillance novatrice au lac de Bizerte, avec pour objectif d'enrichir la gestion des déchets dans cette zone d'une importance capitale...</p>
-          <button className='secondary-button'>See more <FiArrowRight /></button>
+          <Link to='/about' className='secondary-button'>Voir plus <FiArrowRight /></Link>
         </div>
         <div className='home-image-container'>
           <img src={BannerImage} alt="" />

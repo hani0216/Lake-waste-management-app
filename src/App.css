@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Reem Kufi", sans-serif !important;
+  
+
 }
 nav-logo-container{
   background-color: rgb(23, 31, 150);
@@ -20,11 +22,12 @@ img {
   width: 85vw;
   max-width: 1900px;
   margin: 0rem auto;
+  background-color: #004792;
 }
 body {
   max-width: 100%;
   overflow-x: hidden;
-  background-color: cornflowerblue;
+  background-color: #004792;
 }
 
 
