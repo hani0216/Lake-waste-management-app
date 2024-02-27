@@ -1,0 +1,44 @@
+
+  .footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 0%;
+  }
+  
+  .footer-section-one {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .footer-logo-container img {
+    width: 100px; /* Taille de votre logo */
+  }
+  
+  .footer-icons {
+    display: flex;
+    margin-left: 20px; /* Espacement entre le logo et les icônes */
+  }
+  
+  .footer-icons > * {
+    font-size: 24px; /* Taille des icônes */
+    margin-right: 10px; /* Espacement entre les icônes */
+  }
+  
+  .footer-section-two {
+    display: flex;
+    flex-grow: 1; /* Permet au contenu de s'étendre pour remplir l'espace disponible */
+    justify-content: space-between; /* Répartir uniformément le contenu */
+  }
+  
+  .footer-section-columns {
+    flex-grow: 1; /* Permet aux colonnes de s'étendre pour remplir l'espace disponible */
+  }
+  
+  .white-text {
+    color: black; /* Couleur du texte */
+  }
+  

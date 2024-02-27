@@ -2,13 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from "../logo.png";
 import { HiOutlineBars3 } from "react-icons/hi2";
+import './TopNav1.css'
 
 
 const Topnav1 = () => {
   return (
-    <nav>
+    <nav className='nav1'>
       <div className='nav-logo-container'>
-        <img src={Logo} alt="" />
+        <img src={Logo} alt=""  className='image1'/>
       </div>
       <div className='navbar-links-container'>
         <a href="/">Acceuil</a>

@@ -31,9 +31,11 @@
     -o-transition: transform .3s ease-in-out;
 }
   .card-imgMaram {
-    background: #00ff88;
-    background: linear-gradient(to top, #00ff88, #61efff);
-    background-size: cover;
+    background-image: url("./MaramPic.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
   }
   .card-imgHani {
     background-image:url("./HaniImg.jpeg");
