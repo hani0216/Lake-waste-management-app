@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-import Topnav1 from './Topnav1'
-import BannerBackground from '../Assets/home-banner-background.png'
 import BannerImage from '../Assets/home-banner-image.png'
 import { FiArrowRight } from "react-icons/fi"
 import About from './About'

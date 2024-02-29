@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const usersRouter = require('./routes/userRoutes');
+const AdminRoutes = require('./routes/AdminRoutes')
 
 const app = express();
 
@@ -15,6 +16,7 @@ mongoose.connect('mongodb://localhost:27017/db_clients', { useNewUrlParser: true
 
 // Utilisation du routeur pour gérer les requêtes liées aux utilisateurs
 app.use('/users', usersRouter);
+app.use('/admins',  AdminRoutes);
 
 // Démarrage du serveur sur le port 3005
 const port = process.env.PORT || 3005;
