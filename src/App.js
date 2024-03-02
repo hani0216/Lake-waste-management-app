@@ -12,6 +12,8 @@ import LoginClient from './components/loginClient.js';
 import LoginAdmin from './components/loginAdmin.js';
 import LoginAnpe from './components/loginAnpe.js';
 import DashboardClient from './components/Dashboard/Dashboard_Client/DashboardClient.js';
+import CONTACT from './components/ContactForm/Contact.js' ;
+import POSTCONTACT from './components/ContactForm/PostContact.js' ;
 
 const App = () => {
   return (
@@ -27,6 +29,8 @@ const App = () => {
         <Route path="/DashboardAdmin" element={<DashboardAdmin />} />
         <Route path="/DashboardANPE" element={<DashboardANPE />} />
         <Route path="/DashboardClient" element={<DashboardClient />} />
+        <Route path="/Contact" element={< CONTACT />} />
+        <Route path="/PostContact" element={< POSTCONTACT />} />
       </Routes>
     </Router>
   );

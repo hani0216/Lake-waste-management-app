@@ -3,7 +3,7 @@ const AnpeModel = require('../models/ANPE');
 const router = express.Router();
 
 // Route pour récupérer tous les enregistrements Anpe
-router.get('/', async (req, res) => {
+router.get('/anpes', async (req, res) => {
   try {
     const anpes = await AnpeModel.find({});
     res.json(anpes);
@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 });
 
 // Route pour créer un nouvel enregistrement Anpe
-router.post('/', async (req, res) => {
+router.post('/anpes', async (req, res) => {
   const { email, password } = req.body;
 
   try {

@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
+  nom: { type: String, required: true },  
+  adresse: { type: String, required: true },
+  numTel: { type: String, required: true }, 
   email: { type: String, required: true },
   password: { type: String, required: true },
 }, { versionKey: false });
@@ -19,7 +22,13 @@ mongoose.connect('mongodb://localhost:27017/db_clients', { useNewUrlParser: true
           console.log('La collection "anpes" existe déjà');
         } else {
           // Si la collection n'existe pas, créer un nouvel administrateur pour la créer
-          Anpe.create({ email: 'admin@example.com', password: 'password' }, (err, anpe) => {
+          Anpe.create({ 
+            nom: 'VotreNom', 
+            adresse: 'VotreAdresse', 
+            numTel: 'VotreNumTel', 
+            email: 'admin@example.com', 
+            password: 'password' 
+          }, (err, anpe) => {
             if (err) {
               console.error('Erreur lors de la création de l\'anpe:', err);
             } else {

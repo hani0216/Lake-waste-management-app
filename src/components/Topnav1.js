@@ -15,7 +15,7 @@ const Topnav1 = () => {
         <a href="/">Acceuil</a>
         <a href="/about">Qui sommes nous</a>
         <a href="">Actualités</a>
-        <a href="">Contact</a>
+        <a href="/Contact">Contact</a>
         <Link to="/select-profile" className='primary-button'>Se connecter</Link>
       </div>
       <div className='navbar-menu-container'>
