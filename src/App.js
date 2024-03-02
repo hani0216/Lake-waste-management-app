@@ -3,16 +3,18 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Topnav1 from './components/Topnav1';
+import DashboardANPE from './components/Dashboard/Dashboard_ANPE/DahsboardANPE.js'
 import Home1 from './components/Home1';
-import Apropos from './components/Apropos.js'
-import DashboardAdmin from './components/Dashboard/Dashboard_Admin/DashboardAdmin.js' ;
+import Apropos from './components/Apropos.js';
+import DashboardAdmin from './components/Dashboard/Dashboard_Admin/DashboardAdmin.js';
 import SelectProfile from './components/SelectProfile';
 import LoginClient from './components/loginClient.js';
 import LoginAdmin from './components/loginAdmin.js';
 import LoginAnpe from './components/loginAnpe.js';
+import DashboardClient from './components/Dashboard/Dashboard_Client/DashboardClient.js';
+
 const App = () => {
   return (
-   
     <Router>
       <Topnav1 />
       <Routes>
@@ -20,10 +22,11 @@ const App = () => {
         <Route path="/about" element={<Apropos />} />
         <Route path="/select-profile" element={<SelectProfile />} />
         <Route path="/loginAdmin" element={<LoginAdmin />} />
-          <Route path="/loginAnpe" element={<LoginAnpe />} />
-          <Route path="/loginClient" element={<LoginClient />} />
-          <Route path='/DashboardAdmin' element={<DashboardAdmin />} />
-         
+        <Route path="/loginAnpe" element={<LoginAnpe />} />
+        <Route path="/loginClient" element={<LoginClient />} />
+        <Route path="/DashboardAdmin" element={<DashboardAdmin />} />
+        <Route path="/DashboardANPE" element={<DashboardANPE />} />
+        <Route path="/DashboardClient" element={<DashboardClient />} />
       </Routes>
     </Router>
   );

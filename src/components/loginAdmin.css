@@ -14,7 +14,10 @@
 
   }
   
-
+.message{
+  border: 1px solid transparent;
+  color: red;
+}
   .container {
     max-width: 350px;
     background: #F8F9FD;

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './loginAdmin.css';
-import axios from 'axios'
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 function LoginAdmin() {
-  const history = useNavigate();
+  const navigate = useNavigate(); // Utilisation de useNavigate au lieu de history
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
@@ -13,23 +13,22 @@ function LoginAdmin() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:3005/admins", { email, password });
+      const res = await axios.post("http://localhost:3000/admins", { email, password });
       if (res.data === "exist") {
-        history("/DashboardAdmin");
+        navigate("/DashboardAdmin"); // Utilisation de navigate avec la bonne syntaxe
       } else if (res.data === "notexist") {
-        alert("Utilisateur non trouvé");
+        setMessage("Email ou mot de passe incorrect. Si vous n'êtes pas encore inscrit, veuillez nous contacter !")
       }
     } catch (error) {
       alert("Erreur: " + error.message);
-            console.log(error);
+      console.log(error);
     }
   }
 
   return (
     <div className="container">
       <div className="heading">Se connecter</div>
-      <form onSubmit={handleSubmit} className="form">
-        <div>{message}</div>
+      <form className="form" onSubmit={handleSubmit}>
         <input
           required=""
           className="input"
@@ -51,6 +50,7 @@ function LoginAdmin() {
           onChange={(e) => setPassword(e.target.value)}
         />
         <input className="login-button" type="submit" value="Valider" />
+        <div className='message'>{message}</div>
       </form>
     </div>
   );

@@ -1,0 +1,12 @@
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Taille de la vue en hauteur */
+  }
+  
+  .main-title {
+    font-size: 4rem; /* Taille de la police */
+    text-align: center;
+  }
+  
