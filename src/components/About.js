@@ -1,5 +1,4 @@
 import React from 'react'
-import AboutBackground from "../Assets/about-background.png"
 import AboutBackgroundImage from "../Assets/about-background-image.png"
 const About = () => {
   return (
@@ -15,7 +14,7 @@ const About = () => {
                 <h1 className='primary-heading3'>A propos du programme</h1>
                 <p className='primary-text'>Le bassin versant du Lac de Bizerte représente un pôle de développement important pour le gouvernorat de Bizerte. Il se caractérise par de grandes agglomérations urbaines et diverses activités industrielles et commerciales...</p>
                 <div className='about-buttons-coontainer'>
-                    <button className='secondary-button'>Learn more!</button>
+                    <button className='secondary-button'>Voir plus !</button>
                    
                 </div>
         </div>

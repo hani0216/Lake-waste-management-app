@@ -16,10 +16,7 @@ const Footer = () => {
             <img src={Logo} alt="" />
           </div>
           <div className='footer-icons'>
-            <BsTwitter />
-            <SiLinkedin />
-            <BsYoutube />
-            <FaFacebook />
+
           </div>
         </div>
         <div className='footer-section-two'>

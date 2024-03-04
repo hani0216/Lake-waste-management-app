@@ -13,7 +13,7 @@ function LoginAdmin() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:3000/admins", { email, password });
+      const res = await axios.post("http://localhost:3000/admins/login", { email, password });
       if (res.data === "exist") {
         navigate("/DashboardAdmin"); // Utilisation de navigate avec la bonne syntaxe
       } else if (res.data === "notexist") {

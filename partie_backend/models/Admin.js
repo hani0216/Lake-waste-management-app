@@ -7,8 +7,8 @@ const userSchema = new mongoose.Schema({
 
 const Admin = mongoose.model('admin', userSchema);
 
-
-mongoose.connection.once('open', () => {
+mongoose.connect('mongodb://localhost:27017/db_clients', { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
     console.log('Connexion à la base de données réussie');
     
     // Vérifier si la collection existe déjà

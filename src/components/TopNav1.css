@@ -1,6 +1,8 @@
 .nav-logo-container{
     background-color: white;
     margin-left: 10px;
+    z-index: 1;
+
 }
 .nav1{
     background-color: white;

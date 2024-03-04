@@ -1,0 +1,123 @@
+.rwd-table {
+  width: 1000px;
+  right: 0;
+  table-layout:fixed; 
+  z-index: 1;
+
+}
+.aalt{
+  margin-right: 0px;
+  padding-right: 0px;
+  height: 695px;
+  width: 80000;
+
+}
+th, td {
+  text-align: left;
+  padding: .5em; 
+  border: 1px solid #ddd; 
+  background: #18283b;
+
+  
+}
+
+tr:not(:first-child) td:before {
+  font-weight: bold;
+  width: 6.5em;
+  display: inline-block;
+
+}
+
+/* Presentational styling */
+body {
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #ddd;
+  background: #eee;
+  z-index: 1;
+  
+
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: -1px;
+  color: #ddd;
+}
+
+.rwd-table {
+  background-color: #388ae7;
+
+  color: #fff;
+  border-radius: .4em;
+  overflow: hidden;
+  width: 1300px;
+  margin-left: 120px;
+  margin-right: 0px;
+  z-index: 1;
+  padding-left: 5%;
+
+  
+}
+
+
+tr {
+  border-color: lighten(#34495E, 10%);
+}
+
+th, td {
+  margin: .5em 1em;
+}
+
+th, td:before {
+  color: #fc9100;
+}
+.pagecontainer{
+  background-color:#388ae7 ;
+}
+.client-container {
+  display: flex; /* Utilisation de Flexbox */
+  align-items: center; /* Aligner les éléments verticalement */
+  justify-content: space-between; /* Répartir l'espace disponible entre les éléments */
+
+  background-color: #388ae7;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+
+  margin-left: 200px;
+  padding: 0.9rem 1.75rem;
+  background-color: white;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: 0.2s;
+
+}
+.input-style {
+  padding: 0.9rem 1.75rem;
+  background-color: white;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+  
+}
+.alt{
+  background-color:white;
+  color: #fc9100;
+  
+}
+
+.add-client-btn:hover {
+  background-color: #0056b3;
+}

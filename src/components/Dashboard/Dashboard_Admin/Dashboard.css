@@ -1,12 +1,27 @@
-.app-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Taille de la vue en hauteur */
-  }
-  
-  .main-title {
-    font-size: 4rem; /* Taille de la police */
-    text-align: center;
-  }
-  
+.allt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Taille de la vue en hauteur */
+}
+
+.main-title {
+  font-size: 4rem; /* Taille de la police */
+  text-align: center;
+}
+
+.tab {
+  z-index: 1;
+  position: relative;
+  /* Ajoutez le style flex pour aligner la table horizontalement */
+  display: flex;
+  flex-direction: row;
+
+}
+
+.sidebr {
+  z-index: 1;
+  /* Ajoutez le style flex pour aligner la sidebar horizontalement */
+  display: flex;
+  flex-direction: row;
+}

@@ -6,6 +6,7 @@
     width: 100%;
     background-color: white;
     margin-bottom: 0%;
+    
   }
   
   .footer-section-one {
@@ -20,12 +21,12 @@
   
   .footer-icons {
     display: flex;
-    margin-left: 20px; /* Espacement entre le logo et les icônes */
+    margin-left: 220px; /* Espacement entre le logo et les icônes */
   }
   
   .footer-icons > * {
     font-size: 24px; /* Taille des icônes */
-    margin-right: 10px; /* Espacement entre les icônes */
+    margin-left: 20px;
   }
   
   .footer-section-two {
