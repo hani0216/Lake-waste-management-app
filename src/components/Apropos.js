@@ -2,6 +2,7 @@ import React from 'react'
 import AboutCard from './AboutCards/AboutCard.js'
 import AboutTopPage from './AboutTopPage.js'
 import './Apropos.css'
+import Footer from './Footer.js'
 
 function Apropos() {
   return (
@@ -11,6 +12,7 @@ function Apropos() {
       </div>
       <div class='cardsposition'>
       <AboutCard />
+      <Footer />
       </div>
       
       

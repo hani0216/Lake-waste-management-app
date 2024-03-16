@@ -5,6 +5,9 @@
   z-index: 1;
 
 }
+.pos{
+  margin-left: 72%;
+}
 .aalt{
   margin-right: 0px;
   padding-right: 0px;
@@ -12,6 +15,7 @@
   width: 80000;
 
 }
+
 th, td {
   text-align: left;
   padding: .5em; 
@@ -115,6 +119,7 @@ th, td:before {
 .alt{
   background-color:white;
   color: #fc9100;
+  margin-left: 50%;
   
 }
 
