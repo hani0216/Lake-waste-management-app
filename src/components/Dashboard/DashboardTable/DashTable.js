@@ -61,7 +61,7 @@ function DashTable() {
             {currentData.map((element, index) => (
               <tr key={element._id}>
             <td >{element._id}</td>      
-            <td><button className='primary-button'>{element.name}</button></td>
+            <td><Link to={`/ProfilePage`}>  <button className='primary-button'>{element.name}</button></Link></td>
                 <td>{element.email}</td>
                 <td>{element.address}</td>
                 <td>{element.phoneNumber}</td>

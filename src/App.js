@@ -8,9 +8,10 @@ import Home1 from './components/Home1';
 import Apropos from './components/Apropos.js';
 import DashboardAdmin from './components/Dashboard/Dashboard_Admin/DashboardAdmin.js';
 import SelectProfile from './components/SelectProfile';
-import LoginClient from './components/loginClient.js';
-import LoginAdmin from './components/loginAdmin.js';
-import LoginAnpe from './components/loginAnpe.js';
+import LoginClient from './components/LogIn/loginClient.js';
+import ProfilePage from './components/ProfilePages/Profile.js'
+import LoginAdmin from './components/LogIn/loginAdmin.js';
+import LoginAnpe from './components/LogIn/loginAnpe.js';
 import DashboardClient from './components/Dashboard/Dashboard_Client/DashboardClient.js';
 import CONTACT from './components/ContactForm/Contact.js' ;
 import POSTCONTACT from './components/ContactForm/PostContact.js' ;
@@ -33,6 +34,7 @@ const App = () => {
         <Route path="/Contact" element={< CONTACT />} />
         <Route path="/PostContact" element={< POSTCONTACT />} />
         <Route path="/AjouterClient" element={<AjouterClient/>} />
+        <Route path="/ProfilePage" element={<ProfilePage />} />
       </Routes>
     </Router>
   );
