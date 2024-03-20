@@ -13,7 +13,6 @@ router.get('/', async (req, res) => {
     res.status(500).json({ error: 'Erreur lors de la récupération des utilisateurs' });
   }
 });
-
 // Route POST pour ajouter un nouvel utilisateur
 router.post('/', async (req, res) => {
   try {
@@ -28,14 +27,19 @@ router.post('/', async (req, res) => {
     }
 
     // Création d'une nouvelle instance du modèle User avec les données du client
-    const { name, email, address, password, phoneNumber } = req.body;
+    const { name, email, address, password, phoneNumber, tauxPhosphate, tauxNitrate, tauxAmmonium } = req.body;
     const newUser = new UserModel({
       _id: newId, // Utiliser le premier _id vide
       name,
       email,
       address,
       password,
-      phoneNumber
+      phoneNumber,
+      taux: {
+        pho: tauxPhosphate,
+        nit: tauxNitrate,
+        amo: tauxAmmonium
+      }
     });
 
     // Enregistrement du nouvel utilisateur dans la base de données
