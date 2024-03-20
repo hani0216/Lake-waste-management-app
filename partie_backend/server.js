@@ -11,7 +11,7 @@ const app = express();
 // Configurer CORS
 const corsOptions = {
   origin: 'http://localhost:3001', // Remplacez cela par l'origine de votre application cliente
-  methods: ['GET', 'POST'], // Méthodes autorisées
+  methods: ['GET', 'POST','DELETE'], // Méthodes autorisées
   allowedHeaders: ['Content-Type', 'Authorization'], // En-têtes autorisés
 };
 
@@ -33,7 +33,7 @@ app.use('/anpes' ,ANPERoutes )
 // Ajout d'un middleware pour gérer les en-têtes CORS pour les réponses POST
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST','DELETE');
   next();
 });
 
