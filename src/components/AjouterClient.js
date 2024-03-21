@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './LogIn/loginClient.css';
 import SideBar from './Dashboard/SideBar/SideBar';
-import { Link } from 'react-router-dom';
 
 function AjouterClient() {
   const [formData, setFormData] = useState({

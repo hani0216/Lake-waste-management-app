@@ -13,6 +13,21 @@ router.get('/', async (req, res) => {
     res.status(500).json({ error: 'Erreur lors de la récupération des utilisateurs' });
   }
 });
+// userRoutes.js
+
+router.delete('/:userName', async (req, res) => {
+  try {
+    const deletedUser = await UserModel.findOneAndDelete({ name: req.params.userName });
+    if (!deletedUser) {
+      return res.status(404).json({ message: "L'utilisateur n'a pas été trouvé" });
+    }
+    res.status(200).json({ message: "L'utilisateur a été supprimé avec succès" });
+  } catch (error) {
+    console.error('Erreur lors de la suppression de l\'utilisateur :', error);
+    res.status(500).json({ message: "Une erreur est survenue lors de la suppression de l'utilisateur" });
+  }
+});
+
 // Route POST pour ajouter un nouvel utilisateur
 router.post('/', async (req, res) => {
   try {
