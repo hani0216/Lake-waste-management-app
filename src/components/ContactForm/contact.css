@@ -37,7 +37,8 @@ body{
 
 .input-fields{
   display: flex;
-  flex-direction: column;
+  flex-direction:row;
+  gap :30px ;
   margin-right: 4%;
 }
 
@@ -60,6 +61,7 @@ body{
   color: #c5ecfd;
   width: 100%;
   max-height: 100%;
+  width: 200px;
   
 }
 
@@ -93,15 +95,3 @@ body{
     text-decoration: none;
 }
 
-@media screen and (max-width: 600px){
-  .contact-form{
-    flex-direction: column;
-  }
-  .msg textarea{
-    height: 80px;
-  }
-  .input-fields,
-  .msg{
-    width: 100%;
-  }
-}
