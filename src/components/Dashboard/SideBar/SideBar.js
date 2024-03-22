@@ -35,7 +35,7 @@ function SideBar() {
 </Link>
 
           <Link to="/loginAdmin" className="nav-button" onClick={handleLogout}>
-            <i className="fas fa-sign-out-alt"></i>
+          <i className="fas fa-sign-out-alt"></i>
             <span>Déconnexion</span>
           </Link>
         </div> 

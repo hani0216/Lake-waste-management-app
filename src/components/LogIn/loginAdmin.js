@@ -26,7 +26,7 @@ function LoginAdmin() {
   }
 
   return (
-    <div className="container">
+    <div className="container1">
       <div className="heading">Se connecter</div>
       <form className="form" onSubmit={handleSubmit}>
         <input

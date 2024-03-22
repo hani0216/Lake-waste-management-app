@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './LogIn/loginClient.css';
 import SideBar from './Dashboard/SideBar/SideBar';
+import '../AjouterClient.css'
 
 function AjouterClient() {
   const [formData, setFormData] = useState({
