@@ -15,7 +15,7 @@ import LoginAnpe from './components/LogIn/loginAnpe.js';
 import DashboardClient from './components/Dashboard/Dashboard_Client/DashboardClient.js';
 import CONTACT from './components/ContactForm/Contact.js' ;
 import POSTCONTACT from './components/ContactForm/PostContact.js' ;
-import AjouterClient from './components/AjouterClient.js'
+import AjouterClient from './components/AjouterClient.js';
 
 const App = () => {
   return (

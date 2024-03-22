@@ -4,7 +4,9 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const usersRouter = require('./routes/userRoutes');
 const AdminRoutes = require('./routes/AdminRoutes');
-const ANPERoutes = require('./routes/AdminRoutes')
+const ANPERoutes = require('./routes/AdminRoutes');
+const messageRoutes = require('./routes/messageRoutes'); // Importez vos routes de message
+
 
 const app = express();
 
@@ -29,7 +31,8 @@ mongoose.connect('mongodb://localhost:27017/db_clients', { useNewUrlParser: true
 // Utilisation du routeur pour gérer les requêtes liées aux utilisateurs
 app.use('/users', usersRouter);
 app.use('/admins', AdminRoutes);
-app.use('/anpes' ,ANPERoutes )
+app.use('/anpes' ,ANPERoutes );
+app.use('/api', messageRoutes); 
 // Ajout d'un middleware pour gérer les en-têtes CORS pour les réponses POST
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');

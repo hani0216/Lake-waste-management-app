@@ -18,7 +18,10 @@ function SideBar() {
             <span>Tableau de board</span>
           </Link>   
            <div className="nav-button"><i className="fas fa-images"></i><span>Profile</span></div>
-          <div className="nav-button"><i className="fas fa-thumbtack"></i><span>Messages</span></div>
+           <Link to="/messages" className="nav-button">
+  <i className="fas fa-thumbtack"></i>
+  <span>Messages</span>
+</Link>
           <div className="nav-button"><i className="fas fa-thumbtack"></i><span>Déconnexion</span></div>
         </div> 
       </nav>
