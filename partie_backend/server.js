@@ -5,14 +5,14 @@ const bodyParser = require('body-parser');
 const usersRouter = require('./routes/userRoutes');
 const AdminRoutes = require('./routes/AdminRoutes');
 const ANPERoutes = require('./routes/AdminRoutes');
-const MessagesRoutes = require('./routes/MessageRoutes');
+const MessagesRoutes = require('./routes/messageRoutes');
 
 const app = express();
 
 // Configurer CORS
 const corsOptions = {
   origin: 'http://localhost:3001', // Remplacez cela par l'origine de votre application cliente
-  methods: ['GET', 'POST','DELETE'], // Méthodes autorisées
+  methods: ['GET', 'POST','DELETE','PUT'], // Méthodes autorisées
   allowedHeaders: ['Content-Type', 'Authorization'], // En-têtes autorisés
 };
 
@@ -32,12 +32,12 @@ app.use('/users', usersRouter);
 app.use('/admins', AdminRoutes);
 app.use('/anpes' ,ANPERoutes );
 app.use('/messages' , MessagesRoutes)
-// Ajout d'un middleware pour gérer les en-têtes CORS pour les réponses POST
+/*// Ajout d'un middleware pour gérer les en-têtes CORS pour les réponses POST
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST','DELETE');
   next();
-});
+});*/
 
 // Démarrage du serveur sur le port 3005
 const port = process.env.PORT || 3000;

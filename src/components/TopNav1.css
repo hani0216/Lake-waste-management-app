@@ -7,3 +7,20 @@
 .nav1{
     background-color: white;
 }
+
+.navbar-links-container span {
+    margin-right: 300px; /* Ajustez la marge selon votre préférence */
+  
+    color: #e65208; /* Couleur du texte */
+    font-weight: bold; /* Gras */
+    font-size: 18px; /* Taille de police */
+ 
+    text-transform: uppercase; /* Mettre en majuscules */
+    padding: 8px 12px; /* Ajouter un remplissage pour créer un cadre */
+    border: 2px solid #131312; /* Ajouter une bordure */
+    border-radius: 4px; /* Ajouter des coins arrondis à la bordure */
+  
+    font-weight: bold; /* Gras */
+    text-transform: uppercase; /* Mettre en majuscules */
+  }
+  

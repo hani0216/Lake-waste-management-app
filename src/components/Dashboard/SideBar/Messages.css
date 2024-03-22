@@ -1,0 +1,69 @@
+/* Messages.css */
+
+.messages-container {
+    padding: 20px;
+  }
+  
+  .messages-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .message {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .message h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .message p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .back-link {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #0d0e0e;
+  }
+  /* Dans le fichier Messages.css */
+.message {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .message.seen {
+    background-color: #e70f0f; /* Changer la couleur de fond pour les messages vus */
+  }
+  /* Messages.css */
+
+.message {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .message h3 {
+    margin-top: 0;
+  }
+  
+  .message.seen {
+    background-color: #878c8f; /* Couleur de fond pour les messages vus */
+  }
+  
+  .message.selected {
+    background-color: #e8f4ff; /* Couleur de fond pour le message sélectionné */
+  }
+  

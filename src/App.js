@@ -16,6 +16,7 @@ import DashboardClient from './components/Dashboard/Dashboard_Client/DashboardCl
 import CONTACT from './components/ContactForm/Contact.js' ;
 import POSTCONTACT from './components/ContactForm/PostContact.js' ;
 import AjouterClient from './components/AjouterClient.js';
+import Messages from './components/Dashboard/SideBar/Messages.js';
 
 const App = () => {
   return (
@@ -35,6 +36,8 @@ const App = () => {
         <Route path="/PostContact" element={< POSTCONTACT />} />
         <Route path="/AjouterClient" element={<AjouterClient/>} />
         <Route path="/ProfilePage" element={<ProfilePage />} />
+        <Route path="/messages" element={<Messages />} />
+
       </Routes>
     </Router>
   );
