@@ -5,8 +5,13 @@ const userSchema = new mongoose.Schema({
   name: String,
   email: String,
   address: String,
-  password : String ,
-  phoneNumber: String
+  password: String,
+  phoneNumber: String,
+  taux: {
+    pho: Number,
+    nit: Number,
+    amo: Number
+  }
 }, { versionKey: false });
 
 module.exports = mongoose.model('client', userSchema);

@@ -71,23 +71,21 @@ function DashTable() {
         <table className="rwd-table">
           <thead>
             <tr>
-              <th>ID</th>
               <th>Nom</th>
               <th>Mail</th>
               <th>Adresse</th>
               <th>Numero de téléphone</th>
-              <th></th>
+              <th className='sup'></th>
             </tr>
           </thead>
           <tbody>
             {currentData.map((element, index) => (
               <tr key={element._id}>
-                <td>{element._id}</td>
                 <td><Link to={`/ProfilePage`}>  <button className='primary-button'>{element.name}</button></Link></td>
                 <td>{element.email}</td>
                 <td>{element.address}</td>
                 <td>{element.phoneNumber}</td>
-                <td>
+                <td className='sup'>
                   <button className='delete-button' onClick={() => handleDeleteClient(element.name)}>
                     <FaTrash />
                   </button>

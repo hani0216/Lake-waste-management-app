@@ -126,3 +126,15 @@ th, td:before {
 .add-client-btn:hover {
   background-color: #0056b3;
 }
+.sup{
+  background: none;
+  border: none;
+}
+.delete-button{
+  width: 25px;
+  height: 50px;
+  background: none;
+  color: #fc9100;
+  border: none;
+  font-size: 30px;
+}

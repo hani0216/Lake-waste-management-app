@@ -28,7 +28,6 @@ router.delete('/:userName', async (req, res) => {
   }
 });
 
-
 // Route POST pour ajouter un nouvel utilisateur
 router.post('/', async (req, res) => {
   try {
@@ -43,14 +42,19 @@ router.post('/', async (req, res) => {
     }
 
     // Création d'une nouvelle instance du modèle User avec les données du client
-    const { name, email, address, password, phoneNumber } = req.body;
+    const { name, email, address, password, phoneNumber, tauxPhosphate, tauxNitrate, tauxAmmonium } = req.body;
     const newUser = new UserModel({
       _id: newId, // Utiliser le premier _id vide
       name,
       email,
       address,
       password,
-      phoneNumber
+      phoneNumber,
+      taux: {
+        pho: tauxPhosphate,
+        nit: tauxNitrate,
+        amo: tauxAmmonium
+      }
     });
 
     // Enregistrement du nouvel utilisateur dans la base de données
