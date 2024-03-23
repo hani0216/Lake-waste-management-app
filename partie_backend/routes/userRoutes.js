@@ -89,5 +89,21 @@ router.post('/login', async (req, res) => {
     res.json("notexist error");
   }
 });
+// Route GET pour récupérer un utilisateur par son nom
+router.get('/:userName', async (req, res) => {
+  try {
+    const user = await UserModel.findOne({ name: req.params.userName });
+    if (!user) {
+      return res.status(404).json({ message: "L'utilisateur n'a pas été trouvé" });
+    }
+    res.status(200).json(user);
+  } catch (err) {
+    console.error('Erreur lors de la recherche de l\'utilisateur :', err);
+    res.status(500).json({ error: 'Erreur lors de la récupération de l\'utilisateur' });
+  }
+});
+
+
+
 
 module.exports = router;

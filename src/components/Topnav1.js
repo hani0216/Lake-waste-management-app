@@ -1,15 +1,17 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import Logo from "../logo.png";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import './TopNav1.css';
+import App from '../App';
 
 const Topnav1 = () => {
   const location = useLocation();
+  const { clientName } = useParams(); // Utilisez clientName
 
-  // Vérifier si la page actuelle est DashboardAdmin ou Messages
   const isDashboardAdmin = location.pathname === '/DashboardAdmin';
   const isMessagesPage = location.pathname === '/messages';
+  const isProfilePage = location.pathname.includes('/ProfilePage/');
 
   return (
     <nav className='nav1'>
@@ -20,7 +22,11 @@ const Topnav1 = () => {
       )}
       {!isMessagesPage && (
         <div className='navbar-links-container'>
-          {isDashboardAdmin && <span>Bienvenue Administrateur</span>}
+          {isDashboardAdmin ? (
+            <span>Bienvenue Administrateur</span>
+          ) : isProfilePage ? (
+            <span>{`Bienvenue ${clientName}`}</span> // Utilisez clientName
+          ) : null}
           <a href="/">Accueil</a>
           <a href="/about">Qui sommes nous</a>
           <a href="/contact">Contact</a>

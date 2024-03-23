@@ -11,7 +11,7 @@ function Profile() {
         <SideBar/>
         <div className='allt'>
         <ProfileBox  />
-        <EditProfile  />
+       
         </div>
         <Chart />
 
@@ -21,4 +21,4 @@ function Profile() {
   )
 }
 
-export default Profile
+export default Profile;

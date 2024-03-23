@@ -9,7 +9,7 @@ import Apropos from './components/Apropos.js';
 import DashboardAdmin from './components/Dashboard/Dashboard_Admin/DashboardAdmin.js';
 import SelectProfile from './components/SelectProfile';
 import LoginClient from './components/LogIn/loginClient.js';
-import ProfilePage from './components/ProfilePages/Profile.js'
+import Profile from './components/ProfilePages/Profile.js'
 import LoginAdmin from './components/LogIn/loginAdmin.js';
 import LoginAnpe from './components/LogIn/loginAnpe.js';
 import DashboardClient from './components/Dashboard/Dashboard_Client/DashboardClient.js';
@@ -35,8 +35,10 @@ const App = () => {
         <Route path="/Contact" element={< CONTACT />} />
         <Route path="/PostContact" element={< POSTCONTACT />} />
         <Route path="/AjouterClient" element={<AjouterClient/>} />
-        <Route path="/ProfilePage" element={<ProfilePage />} />
-        <Route path="/messages" element={<Messages />} />
+        <Route path="/ProfilePage/:clientName" element={<>
+  <Topnav1 />
+  <Profile />
+</>} />        <Route path="/messages" element={<Messages />} />
 
       </Routes>
     </Router>

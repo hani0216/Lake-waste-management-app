@@ -36,23 +36,19 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Route PUT pour mettre à jour un message comme vu
+// Route PUT pour marquer un message comme vu
 router.put('/:id', async (req, res) => {
-    try {
-      const messageId = req.params.id;
-      const { isSeen } = req.body;
-  
-      const updatedMessage = await MessageModel.findByIdAndUpdate(messageId, { isSeen }, { new: true });
-  
-      if (!updatedMessage) {
-        return res.status(404).json({ error: "Message non trouvé" });
-      }
-  
-      res.json(updatedMessage);
-    } catch (error) {
-      console.error('Erreur lors de la mise à jour du message :', error);
-      res.status(500).json({ error: 'Erreur lors de la mise à jour du message' });
+  try {
+    const messageId = req.params.id;
+    const updatedMessage = await MessageModel.findByIdAndUpdate(messageId, { isSeen: true }, { new: true });
+    if (!updatedMessage) {
+      return res.status(404).json({ error: 'Message non trouvé' });
     }
-  });
+    res.json(updatedMessage);
+  } catch (err) {
+    console.error('Erreur lors de la mise à jour du message :', err);
+    res.status(500).json({ error: 'Erreur lors de la mise à jour du message' });
+  }
+});
 
 module.exports = router;
