@@ -17,6 +17,7 @@ import CONTACT from './components/ContactForm/Contact.js' ;
 import POSTCONTACT from './components/ContactForm/PostContact.js' ;
 import AjouterClient from './components/AjouterClient.js';
 import Messages from './components/Dashboard/SideBar/Messages.js';
+import SetTaux from './components/Dashboard/Dashboard_Admin/SetTaux.js';
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
         <Route path="/loginAdmin" element={<LoginAdmin />} />
         <Route path="/loginAnpe" element={<LoginAnpe />} />
         <Route path="/loginClient" element={<LoginClient />} />
+        <Route path="/SetTaux" element={<SetTaux />} />
         <Route path="/DashboardAdmin" element={<DashboardAdmin />} />
         <Route path="/DashboardANPE" element={<DashboardANPE />} />
         <Route path="/DashboardClient" element={<DashboardClient />} />

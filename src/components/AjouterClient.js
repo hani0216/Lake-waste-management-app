@@ -10,9 +10,9 @@ function AjouterClient() {
     email: '',
     address: '',
     phoneNumber: '',
-    tauxPhosphate: '',
-    tauxNitrate: '',
-    tauxAmmonium: ''
+    tauxPho: '',
+    tauxNit: '',
+    tauxAmo: ''
   });
 
   const handleChange = (e) => {
@@ -51,21 +51,20 @@ function AjouterClient() {
         <form className="form" onSubmit={handleSubmit}>
           <div className='bloc1' >
             <div className='bloc11'>
-            <input required className="input" type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Nom" />
-            <input required className="input" type="text" name="address" value={formData.address} onChange={handleChange} placeholder="Adresse" />
+              <input required className="input" type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Nom" />
+              <input required className="input" type="text" name="address" value={formData.address} onChange={handleChange} placeholder="Adresse" />
             </div>
             <div>
-            <input required className="input" type="email" name="email" value={formData.email} onChange={handleChange} placeholder="E-mail" />
-            <input required className="input" type="tel" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="Numero de téléphone" />
-
+              <input required className="input" type="email" name="email" value={formData.email} onChange={handleChange} placeholder="E-mail" />
+              <input required className="input" type="tel" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="Numero de téléphone" />
             </div>
           </div>
           <input required className="input" type="password" name="password" value={formData.password} onChange={handleChange} placeholder="Mot de passe" />
           <div className="saisir-taux">
             <div className="title"></div>
-            <input required className="input" type="number" name="tauxPhosphate" value={formData.tauxPhosphate} onChange={handleChange} placeholder="Taux de phosphate" />
-            <input required className="input" type="number" name="tauxNitrate" value={formData.tauxNitrate} onChange={handleChange} placeholder="Taux de nitrate" />
-            <input required className="input" type="number" name="tauxAmmonium" value={formData.tauxAmmonium} onChange={handleChange} placeholder="Taux d'ammonium" />
+            <input required className="input" type="number" name="tauxPho" value={formData.tauxPho} onChange={handleChange} placeholder="Taux de phosphate" />
+            <input required className="input" type="number" name="tauxNit" value={formData.tauxNit} onChange={handleChange} placeholder="Taux de nitrate" />
+            <input required className="input" type="number" name="tauxAmo" value={formData.tauxAmo} onChange={handleChange} placeholder="Taux d'ammonium" />
           </div>
           <button type="submit" className="login-button">Valider</button>
         </form>

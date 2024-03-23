@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const usersRouter = require('./routes/userRoutes');
 const AdminRoutes = require('./routes/AdminRoutes');
 const ANPERoutes = require('./routes/AdminRoutes');
-const MessagesRoutes = require('./routes/messageRoutes');
+const MessagesRoutes = require ('./routes/messageRoutes') ;
 
 const app = express();
 
