@@ -80,7 +80,7 @@ function Messages() {
           ))}
         </div>
       )}
-      <Link to="/DashboardAdmin" className="back-link">Retour au tableau de bord</Link>
+      <Link to="/DashboardAdmin" className="primary-button">Retour au tableau de bord</Link>
     </div>
   );
 }

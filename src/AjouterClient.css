@@ -1,12 +1,12 @@
 
 .formLogIn {
     position: absolute;
-    top: 10%;
+    top: 0%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 0%;
     background-color: rgb(189, 184, 195);
-    width: 2000px;
+    width: 1800px;
     border: 2px solid black;
     padding: 20px;
     border-radius: 61px;
@@ -20,7 +20,7 @@
     background: #ce7406;
     background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
     border-radius: 40px;
-    padding: 25px 35px;
+    padding: 15px 20px;
     border: 5px solid rgb(255, 255, 255);
     box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
     margin: 0px;
@@ -45,18 +45,21 @@
   .form .input {
     width: 100%;
     background: white;
+    height: 50px;
     border: none;
     padding: 15px 20px;
     border-radius: 20px;
-    margin-top: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
     box-shadow: #cff0ff 0px 10px 10px -5px;
     border-inline: 2px solid transparent;
     margin-right: 50px;
     max-width: 300px;
+    color: black;
   }
   
   .form .input::-moz-placeholder {
-    color: rgb(170, 170, 170);
+    color: black ;
   }
   
   .form .input::placeholder {
@@ -87,7 +90,7 @@
     background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
     color: white;
     padding-block: 15px;
-    margin: 20px auto;
+    margin: 20px 0px;
     border-radius: 20px;
     box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
     border: none;

@@ -72,9 +72,10 @@ function DashTable() {
           <thead>
             <tr>
               <th>Nom</th>
-              <th>Mail</th>
-              <th>Adresse</th>
-              <th>Numero de téléphone</th>
+              <th>Taux de phosphate</th>
+              <th>Taux de nitrate</th>
+              <th>Numero d'ammonium</th>
+              <th>Etat d'alerte</th>
               <th className='sup'></th>
             </tr>
           </thead>
@@ -87,9 +88,11 @@ function DashTable() {
   </Link>
 </td>
 
-                <td>{element.email}</td>
-                <td>{element.address}</td>
-                <td>{element.phoneNumber}</td>
+                <td>{element.tauxPho ?? 'N/A'}</td>
+
+                <td>{element.tauxAmo ?? 'N/A'}</td>
+                <td>{element.tauxNit  ?? 'N/A'}</td>
+                <td>{}</td>
                 <td className='sup'>
                   <button className='delete-button' onClick={() => handleDeleteClient(element.name)}>
                     <FaTrash />

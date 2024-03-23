@@ -16,8 +16,7 @@ function SideBar() {
       <nav id="nav-bar">
         <div id="nav-header">
           <h3>Bienvenue !</h3>  
-          <label htmlFor="nav-toggle">
-          </label>
+          <label htmlFor="nav-toggle"></label>
           <hr />
         </div>
         <div id="nav-content">
@@ -30,12 +29,15 @@ function SideBar() {
             <span>Profile</span>
           </div>
           <Link to="/messages" className="nav-button">
-  <i className="fas fa-thumbtack"></i>
-  <span>Messages</span>
-</Link>
-
+            <i className="fas fa-thumbtack"></i>
+            <span>Messages</span>
+          </Link>
+          <Link to="/SetTaux" className="nav-button">
+            <i className="fas fa-cog"></i>
+            <span>Modifier seuil</span>
+          </Link>
           <Link to="/loginAdmin" className="nav-button" onClick={handleLogout}>
-          <i className="fas fa-sign-out-alt"></i>
+            <i className="fas fa-sign-out-alt"></i>
             <span>Déconnexion</span>
           </Link>
         </div> 
