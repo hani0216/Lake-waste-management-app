@@ -73,14 +73,8 @@ body{
   /* Chrome/Opera/Safari */
   color: #c5ecfd;
 }
-::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #c5ecfd;
-}
-:-ms-input-placeholder {
-  /* IE 10+ */
-  color: #c5ecfd;
-}
+
+
 .textmsj{
   color: white;
 }
