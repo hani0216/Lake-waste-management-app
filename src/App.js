@@ -38,7 +38,7 @@ const App = () => {
         <Route path="/PostContact" element={< POSTCONTACT />} />
         <Route path="/AjouterClient" element={<AjouterClient/>} />
         <Route path="/ProfilePage/:clientName" element={<>
-  <Topnav1 />
+
   <Profile />
 </>} />        <Route path="/messages" element={<Messages />} />
 

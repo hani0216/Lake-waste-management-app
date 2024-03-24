@@ -3,11 +3,10 @@ import { Link, useLocation, useParams } from 'react-router-dom';
 import Logo from "../logo.png";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import './TopNav1.css';
-import App from '../App';
 
 const Topnav1 = () => {
   const location = useLocation();
-  const { clientName } = useParams(); // Utilisez clientName
+  const { clientName } = useParams();
 
   const isDashboardAdmin = location.pathname === '/DashboardAdmin';
   const isMessagesPage = location.pathname === '/messages';
@@ -24,14 +23,14 @@ const Topnav1 = () => {
         <div className='navbar-links-container'>
           {isDashboardAdmin ? (
             <span>Bienvenue Administrateur</span>
-          ) : isProfilePage ? (
-            <span>{`Bienvenue ${clientName}`}</span> // Utilisez clientName
+          ) : isProfilePage && clientName ? (
+            <span>{`Bienvenue ${clientName}`}</span>
           ) : null}
           <a href="/">Accueil</a>
           <a href="/about">Qui sommes nous</a>
           <a href="/contact">Contact</a>
           {!isDashboardAdmin && <a href="/actualites">Actualités</a>}
-          {!isDashboardAdmin ? (
+          {!isDashboardAdmin && !isProfilePage ? (
             <Link to="/select-profile" className='primary-button'>Se connecter</Link>
           ) : null}
         </div>
