@@ -22,6 +22,7 @@ function ProfileBox() {
 
   return (
     <div>
+      <h1>Bienvenue {clientName}</h1>
       <div class="card">
         <div className='infobox'>
           <div class="cover-photo">

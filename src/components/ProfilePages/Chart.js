@@ -1,39 +1,42 @@
-import React from 'react';
-import Highcharts from 'highcharts';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import HighchartsReact from 'highcharts-react-official';
+import Highcharts from 'highcharts';
+function Chart() {
+  const [clientData, setClientData] = useState(null);
+  const { clientName } = useParams();
 
-const Chart = () => {
+  useEffect(() => {
+    fetch(`http://localhost:3000/users/${clientName}`)
+      .then(response => response.json())
+      .then(data => {
+        setClientData(data);
+      })
+      .catch(error => console.error('Erreur lors de la récupération des données du client : ', error));
+  }, [clientName]);
+
+  if (!clientData) {
+    return <div>Loading...</div>;
+  }
+
   const options = {
     chart: {
       type: 'column'
     },
     title: {
-      text: 'Diagramme des taux '
+      text: `Diagramme des taux pour ${clientData.name}`
     },
     xAxis: {
-      categories: ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sep', 'Oct', 'Nov', 'Déc']
+      categories: ['Phosphate', 'Nitrate', 'Ammonium']
     },
     yAxis: {
       title: {
         text: 'Quantité'
       }
     },
-    plotOptions: {
-      column: {
-        borderWidth: 0,
-        stacking: 'normal',
-        grouping: false
-      }
-    },
     series: [{
-      name: 'Phospote',
-      data: [29, 71, 106, 129, 144, 176, 135, 148, 216, 194, 95, 54]
-    }, {
-      name: 'nitrate',
-      data: [19, 62, 88, 92, 105, 136, 112, 108, 183, 139, 89, 42]
-    }, {
-      name: 'ammonium',
-      data: [12, 43, 69, 71, 82, 96, 75, 80, 135, 102, 64, 31]
+      name: 'Taux',
+      data: [clientData.tauxPho, clientData.tauxNit, clientData.tauxAmo]
     }]
   };
 
@@ -45,6 +48,6 @@ const Chart = () => {
       />
     </div>
   );
-};
+}
 
 export default Chart;
