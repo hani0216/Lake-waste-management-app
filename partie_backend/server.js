@@ -6,6 +6,7 @@ const usersRouter = require('./routes/userRoutes');
 const AdminRoutes = require('./routes/AdminRoutes');
 const ANPERoutes = require('./routes/AdminRoutes');
 const MessagesRoutes = require ('./routes/messageRoutes') ;
+const TauxRoutes =require('./routes/TauxRoutes')
 
 const app = express();
 
@@ -31,7 +32,8 @@ mongoose.connect('mongodb://localhost:27017/db_clients', { useNewUrlParser: true
 app.use('/users', usersRouter);
 app.use('/admins', AdminRoutes);
 app.use('/anpes' ,ANPERoutes );
-app.use('/messages' , MessagesRoutes)
+app.use('/messages' , MessagesRoutes);
+app.use('/taux' , TauxRoutes);
 /*// Ajout d'un middleware pour gérer les en-têtes CORS pour les réponses POST
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');

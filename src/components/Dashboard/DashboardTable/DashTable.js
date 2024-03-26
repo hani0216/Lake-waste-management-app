@@ -5,27 +5,31 @@ import { FaTrash } from 'react-icons/fa';
 
 function DashTable() {
   const [donnees, setDonnees] = useState([]);
+  const [seuils, setSeuils] = useState({}); // État pour stocker les seuils
   const [searchTerm, setSearchTerm] = useState('');
   const [page, setPage] = useState(1);
   const [pageSize] = useState(7); // Nombre de lignes par page
 
   useEffect(() => {
+    // Récupérer les données des clients
     fetch('http://localhost:3000/users')
       .then(response => response.json())
       .then(data => setDonnees(data))
-      .catch(error => console.error('Erreur lors de la récupération des données : ', error));
+      .catch(error => console.error('Erreur lors de la récupération des données des clients : ', error));
+
+    // Récupérer les seuils
+    fetch('http://localhost:3000/taux/')
+      .then(response => response.json())
+      .then(data => setSeuils(data))
+      .catch(error => console.error('Erreur lors de la récupération des seuils : ', error));
   }, []);
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
   };
 
-  const filteredData = donnees.filter((element) => {
-    return element.name.toLowerCase().includes(searchTerm.toLowerCase());
-  });
-
   // Trier les données en fonction de l'ID
-  const sortedData = filteredData.sort((a, b) => a._id - b._id);
+  const sortedData = donnees.sort((a, b) => a._id - b._id);
 
   // Pagination
   const lastIndex = page * pageSize;
@@ -58,7 +62,14 @@ function DashTable() {
         });
     }
   };
-  
+
+  // Fonction pour comparer les valeurs avec les seuils
+  const comparerValeurs = (pho, amo, nit) => {
+    if (pho > seuils.pho || amo > seuils.amo || nit > seuils.nit) {
+      return 'Alerte';
+    }
+    return 'Normal';
+  };
 
   return (
     <div className='aalt'>
@@ -82,17 +93,19 @@ function DashTable() {
           <tbody>
             {currentData.map((element, index) => (
               <tr key={element._id}>
-               <td>
-  <Link to={`/ProfilePage/${element.name}`}>
-    <button className='primary-button'>{element.name}</button>
-  </Link>
-</td>
-
+                <td>
+                  <Link to={`/ProfilePage/${element.name}`}>
+                    <button className='primary-button'>{element.name}</button>
+                  </Link>
+                </td>
                 <td>{element.tauxPho ?? 'N/A'}</td>
-
                 <td>{element.tauxAmo ?? 'N/A'}</td>
                 <td>{element.tauxNit  ?? 'N/A'}</td>
-                <td>{}</td>
+                  <td>
+                  {seuils.pho && seuils.amo && seuils.nit ?
+                    comparerValeurs(element.tauxPho, element.tauxAmo, element.tauxNit) :
+                    'Normal'}
+                </td>
                 <td className='sup'>
                   <button className='delete-button' onClick={() => handleDeleteClient(element.name)}>
                     <FaTrash />
