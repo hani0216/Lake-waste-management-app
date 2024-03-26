@@ -87,5 +87,37 @@ router.get('/:userName', async (req, res) => {
     res.status(500).json({ error: 'Erreur lors de la récupération de l\'utilisateur' });
   }
 });
+// Nouvelle route GET pour récupérer un utilisateur par son email
+router.get('/email/:userEmail', async (req, res) => {
+  try {
+    const user = await UserModel.findOne({ email: req.params.userEmail });
+    if (!user) {
+      return res.status(404).json({ message: "L'utilisateur n'a pas été trouvé" });
+    }
+    res.status(200).json(user);
+  } catch (err) {
+    console.error('Erreur lors de la recherche de l\'utilisateur par email :', err);
+    res.status(500).json({ error: 'Erreur lors de la récupération de l\'utilisateur par email' });
+  }
+});
+
+router.put('/edit-profile/:email', async (req, res) => {
+  const { email } = req.params;
+  const newData = req.body;
+
+  try {
+    const updatedUser = await UserModel.findOneAndUpdate({ email }, newData, { new: true });
+
+    if (!updatedUser) {
+      return res.status(404).json({ message: 'Utilisateur non trouvé' });
+    }
+
+    return res.status(200).json({ message: 'Données du client mises à jour avec succès', user: updatedUser });
+  } catch (error) {
+    console.error('Erreur lors de la mise à jour des données du client : ', error);
+    return res.status(500).json({ message: 'Une erreur s\'est produite lors de la mise à jour des données du client' });
+  }
+});
+
 
 module.exports = router;

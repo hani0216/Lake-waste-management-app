@@ -11,6 +11,7 @@ const Topnav1 = () => {
   const isDashboardAdmin = location.pathname === '/DashboardAdmin';
   const isMessagesPage = location.pathname === '/messages';
   const isProfilePage = location.pathname.includes('/ProfilePage/');
+  const isDashboardClient = location.pathname.includes('/DashboardClient/');
 
   return (
     <nav className='nav1'>
@@ -29,8 +30,8 @@ const Topnav1 = () => {
           <a href="/">Accueil</a>
           <a href="/about">Qui sommes nous</a>
           <a href="/contact">Contact</a>
-          {!isDashboardAdmin && <a href="/actualites">Actualités</a>}
-          {!isDashboardAdmin && !isProfilePage ? (
+          {!isDashboardAdmin && !isDashboardClient && <a href="/actualites">Actualités</a>}
+          {!isDashboardAdmin && !isProfilePage && !isDashboardClient ? (
             <Link to="/select-profile" className='primary-button'>Se connecter</Link>
           ) : null}
         </div>

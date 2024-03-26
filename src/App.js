@@ -18,7 +18,7 @@ import POSTCONTACT from './components/ContactForm/PostContact.js' ;
 import AjouterClient from './components/AjouterClient.js';
 import Messages from './components/Dashboard/SideBar/Messages.js';
 import SetTaux from './components/Dashboard/Dashboard_Admin/SetTaux.js';
-
+import EditProfile from './components/Dashboard/Dashboard_Client/EditProfile.js';
 const App = () => {
   return (
     <Router>
@@ -31,9 +31,11 @@ const App = () => {
         <Route path="/loginAnpe" element={<LoginAnpe />} />
         <Route path="/loginClient" element={<LoginClient />} />
         <Route path="/SetTaux" element={<SetTaux />} />
+        <Route path="/edit-profile/:email" element={<EditProfile />} />
+
         <Route path="/DashboardAdmin" element={<DashboardAdmin />} />
         <Route path="/DashboardANPE" element={<DashboardANPE />} />
-        <Route path="/DashboardClient" element={<DashboardClient />} />
+        <Route path="/DashboardClient/:email" element={<DashboardClient />} />
         <Route path="/Contact" element={< CONTACT />} />
         <Route path="/PostContact" element={< POSTCONTACT />} />
         <Route path="/AjouterClient" element={<AjouterClient/>} />

@@ -1,13 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './SideBarCl.css'
+import { Link, useParams } from 'react-router-dom';
+import './SideBarCl.css';
 
 function SideBarCl() {
+  const { email } = useParams(); // Récupérer l'email depuis les paramètres d'URL
+
   const handleLogout = () => {
     const confirmLogout = window.confirm("Êtes-vous sûr de vouloir vous déconnecter ?");
     if (confirmLogout) {
       // Redirection vers la page de déconnexion
-      window.location.href = "/loginAdmin";
+      window.location.href = "/loginClient";
     }
   };
 
@@ -15,25 +17,20 @@ function SideBarCl() {
     <div>
       <nav id="nav-bar">
         <div id="nav-header">
-          <h3>Bienvenue !</h3>  
+          <h3>Bienvenue !</h3> {/* Utiliser le clientName récupéré */}
           <label htmlFor="nav-toggle"></label>
           <hr />
         </div>
-        <div id="nav-content">
-          <Link to="/DashboardAdmin" className="nav-button">
-            <i className="fas fa-palette"></i>
-            <span>Tableau de board</span>
-          </Link>   
-         
+        <div id="nav-content">  
           <Link to="/messages" className="nav-button">
             <i className="fas fa-thumbtack"></i>
             <span>Alerte</span>
           </Link>
-          <Link to="/SetTaux" className="nav-button">
+          <Link to={`/edit-profile/${email}`} className="nav-button"> {/* Utilisez email ici */}
             <i className="fas fa-cog"></i>
-            <span>Modifier Profile</span>
+            <span>Modifier le profil</span>
           </Link>
-          <Link to="/loginAdmin" className="nav-button" onClick={handleLogout}>
+          <Link to="/loginClient" className="nav-button" onClick={handleLogout}>
             <i className="fas fa-sign-out-alt"></i>
             <span>Déconnexion</span>
           </Link>

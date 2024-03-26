@@ -1,5 +1,6 @@
+// LoginClient.js
 import React, { useState } from 'react';
-import './loginClient.css';
+import './loginAdmin.css';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -11,19 +12,20 @@ function LoginClient() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-
+  
     try {
       const res = await axios.post("http://localhost:3000/users/login", { email, password });
       if (res.data === "exist") {
-        navigate("/DashboardClient");
+        navigate(`/DashboardClient/${email}`);
       } else if (res.data === "notexist") {
         setMessage("Email ou mot de passe incorrect. Si vous n'êtes pas encore inscrit, veuillez nous contacter !");
       }
     } catch (error) {
-      alert("Erreur: " + error.message);
+      setMessage("Une erreur s'est produite lors de la connexion. Veuillez réessayer.");
       console.log(error);
     }
   }
+  
 
   return (
     <div className="container">
