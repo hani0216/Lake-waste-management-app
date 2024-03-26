@@ -1,8 +1,11 @@
 import React from 'react'
+import SideBarCl from './SideBarCl';
 
 function DashboardClient() {
   return (
-    <div>DashboardClient</div>
+    <div>
+      <SideBarCl />
+    </div>
   )
 }
 

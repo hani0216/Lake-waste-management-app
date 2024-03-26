@@ -1,8 +1,8 @@
 import React from 'react';
-import './SideBar.css';
 import { Link } from 'react-router-dom';
+import './SideBarCl.css'
 
-function SideBar() {
+function SideBarCl() {
   const handleLogout = () => {
     const confirmLogout = window.confirm("Êtes-vous sûr de vouloir vous déconnecter ?");
     if (confirmLogout) {
@@ -27,11 +27,11 @@ function SideBar() {
          
           <Link to="/messages" className="nav-button">
             <i className="fas fa-thumbtack"></i>
-            <span>Messages</span>
+            <span>Alerte</span>
           </Link>
           <Link to="/SetTaux" className="nav-button">
             <i className="fas fa-cog"></i>
-            <span>Modifier seuil</span>
+            <span>Modifier Profile</span>
           </Link>
           <Link to="/loginAdmin" className="nav-button" onClick={handleLogout}>
             <i className="fas fa-sign-out-alt"></i>
@@ -43,4 +43,4 @@ function SideBar() {
   );
 }
 
-export default SideBar;
+export default SideBarCl;
