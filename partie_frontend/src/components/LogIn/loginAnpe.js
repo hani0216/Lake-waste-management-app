@@ -13,9 +13,9 @@ function LoginAnpe() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:3000/admins", { email, password });
+      const res = await axios.post("http://localhost:3000/anpes", { email, password });
       if (res.data === "exist") {
-        navigate("/DashboardANPE"); // Utilisation de navigate avec la bonne syntaxe
+        navigate("/DashboardAdmin"); // Utilisation de navigate avec la bonne syntaxe
       } else if (res.data === "notexist") {
         setMessage("Email ou mot de passe incorrect. Si vous n'êtes pas encore inscrit, veuillez nous contacter !");
       }

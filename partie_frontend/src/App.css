@@ -7,7 +7,7 @@
 
 }
 nav-logo-container{
-  background-color: rgb(23, 31, 150);
+  background-color: rgb(85, 179, 189);
  
 }
 .maram{
@@ -22,12 +22,12 @@ img {
   width: 85vw;
   max-width: 1900px;
   margin: 0rem auto;
-  background-color: #004792;
+  background-color: rgb(85, 179, 189);
 }
 body {
   max-width: 100%;
   overflow-x: hidden;
-  background-color: #004792;
+  background-color: rgb(85, 179, 189);
 }
 
 
