@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './Profile.css';
+import SideBarCl from './SideBarCl';
+import './EditProfile.css'
 
 function EditProfile() {
   const { email } = useParams(); // Récupérer l'email depuis les paramètres d'URL
@@ -66,7 +68,8 @@ function EditProfile() {
 
   return (
     <div>
-      <h2>Modification de profil pour {email}</h2>
+      <SideBarCl />
+      <h2> {email}</h2>
 
 
 

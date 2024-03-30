@@ -21,10 +21,15 @@ function SideBarCl() {
           <label htmlFor="nav-toggle"></label>
           <hr />
         </div>
-        <div id="nav-content">  
+        <div id="nav-content"> 
+         
+          <Link to="/DashboardClient/${email}" className="nav-button">
+            <i className="fas fa-thumbtack"></i>
+            <span>Tableau de board</span>
+          </Link>
           <Link to="/messages" className="nav-button">
             <i className="fas fa-thumbtack"></i>
-            <span>Alerte</span>
+            <span>Notifications</span>
           </Link>
           <Link to={`/edit-profile/${email}`} className="nav-button"> {/* Utilisez email ici */}
             <i className="fas fa-cog"></i>
