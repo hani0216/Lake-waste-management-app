@@ -24,7 +24,7 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 // Connexion à la base de données MongoDB
-mongoose.connect('mongodb://localhost:27017/db_clients', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://mongo:27017/db_clients', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie'))
   .catch(err => console.error('Erreur de connexion à MongoDB:', err));
 
@@ -41,7 +41,6 @@ app.use((req, res, next) => {
   next();
 });*/
 
-// Démarrage du serveur sur le port 3005
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Serveur démarré sur le port ${port}`);

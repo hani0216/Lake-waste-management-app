@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
 const Anpe = mongoose.model('anpe', userSchema);
 
 // Connexion à la base de données
-mongoose.connect('mongodb://localhost:27017/db_clients', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://mongo:27017/db_clients', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Connexion à la base de données réussie');
 

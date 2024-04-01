@@ -1,0 +1,35 @@
+# Ignorer les fichiers compilés
+*.class
+*.jar
+*.war
+*.ear
+
+# Ignorer les fichiers d'exécution Python
+*.pyc
+
+# Ignorer les répertoires de dépendances générés
+node_modules/
+vendor/
+
+# Ignorer les fichiers de configuration spécifiques à l'utilisateur
+.idea/
+.vscode/
+
+# Ignorer les fichiers de sauvegarde
+*~
+*.swp
+# Ignorer le dossier User
+User/
+
+# Ignorer les fichiers logs
+logs/
+
+# Ignorer le fichier languagepacks.json
+languagepacks.json
+
+
+# Ignorer le dossier Backups
+Backups/
+
+# Ignorer le dossier transportdecurity
+transportdecurity/

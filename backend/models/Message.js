@@ -13,7 +13,7 @@ const messageSchema = new mongoose.Schema({
 });
 
 // Connexion à la base de données
-mongoose.connect('mongodb://localhost:27017/db_clients', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://mongo:27017/db_clients', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Connexion à la base de données réussie');
   })
