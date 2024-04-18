@@ -60,11 +60,7 @@ pipeline {
 
     post {
         always {
-            node {
-                // Ajouter une étiquette appropriée pour l'agent Jenkins
-                label 'docker'
                 sh 'docker-compose -f docker-compose.yml down'
-            }
         }
     }
 }
