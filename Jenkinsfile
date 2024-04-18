@@ -2,12 +2,15 @@ pipeline {
     agent any
     
     environment {
-        DOCKER_COMPOSE_VERSION = '1.29.2'  
-        MONGODB_URL = 'mongodb://mongo:27017/db_clients'  
+        DOCKER_COMPOSE_VERSION = "1.29.2"  
+        MONGODB_URL = "mongodb://mongo:27017/db_clients"  
         DOCKERHUB_USERNAME = credentials('hani016')  
         DOCKERHUB_PASSWORD = credentials('hanihani00216')  
-        DOCKERHUB_REPOS = 'hani0216/mongo'
-        ANOTHER_REPO = 'hani0216/node'
+        environment {
+    DOCKERHUB_REPOS = 'hani0216/mongo'
+    ANOTHER_REPO = 'hani0216/node'
+}
+
     }
 
     stages {
@@ -42,7 +45,7 @@ pipeline {
                 script {
                     for (repo in env.DOCKERHUB_REPOS) {
                         // Se connecter à DockerHub
-                        sh "docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD"
+                        sh "docker login -u $hani0216 -p $hanihani00216"
                         // Pousser l'image Docker vers DockerHub
                         sh "docker push $repo"
                     }
@@ -53,15 +56,18 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    sh 'docker-compose -f docker-compose.yml up -d'
+                    sh "docker-compose -f docker-compose.yml up -d"
                 }
             }
         }
     }
 
     post {
-        always {
+    always {
+        node {
             sh 'docker-compose -f docker-compose.yml down'
         }
     }
+}
+
 }
