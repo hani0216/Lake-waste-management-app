@@ -58,12 +58,7 @@ pipeline {
         }
     }
 
-    post {
-    always {
-        // Ajouter une étiquette appropriée pour l'agent Jenkins si nécessaire
-        label 'docker'
-        sh 'docker-compose -f docker-compose.yml down'
-    }
+    
 }
 
 }
