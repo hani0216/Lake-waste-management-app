@@ -6,11 +6,7 @@ pipeline {
         MONGODB_URL = "mongodb://mongo:27017/db_clients"  
         DOCKERHUB_USERNAME = credentials('hani016')  
         DOCKERHUB_PASSWORD = credentials('hanihani00216')  
-        environment {
-    DOCKERHUB_REPOS = 'hani0216/mongo'
-    ANOTHER_REPO = 'hani0216/node'
-}
-
+        DOCKERHUB_REPOS = "hani0216/mongo hani0216/node"
     }
 
     stages {
@@ -27,7 +23,7 @@ pipeline {
                 sh 'npm run build'
                 // Construire et taguer les images Docker pour chaque référentiel
                 script {
-                    for (repo in env.DOCKERHUB_REPOS) {
+                    for (repo in env.DOCKERHUB_REPOS.split(' ')) {
                         sh "docker build -t $repo ."
                     }
                 }
@@ -43,9 +39,9 @@ pipeline {
         stage('Push to DockerHub') {
             steps {
                 script {
-                    for (repo in env.DOCKERHUB_REPOS) {
+                    for (repo in env.DOCKERHUB_REPOS.split(' ')) {
                         // Se connecter à DockerHub
-                        sh "docker login -u $hani0216 -p $hanihani00216"
+                        sh "docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD"
                         // Pousser l'image Docker vers DockerHub
                         sh "docker push $repo"
                     }
@@ -63,11 +59,10 @@ pipeline {
     }
 
     post {
-    always {
-        node {
-            sh 'docker-compose -f docker-compose.yml down'
+        always {
+            node {
+                sh 'docker-compose -f docker-compose.yml down'
+            }
         }
     }
-}
-
 }
