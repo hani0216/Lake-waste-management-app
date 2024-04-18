@@ -6,7 +6,7 @@ pipeline {
         MONGODB_URL = 'mongodb://mongo:27017/db_clients'  
         DOCKERHUB_USERNAME = credentials('hani016')  
         DOCKERHUB_PASSWORD = credentials('hanihani00216')  
-        DOCKERHUB_REPOS = ["hani0216/mongo", "hani0216/node"]
+        ['hani0216/mongo', 'hani0216/node']
     }
 
     stages {
